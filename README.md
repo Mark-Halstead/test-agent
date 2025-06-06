@@ -16,4 +16,8 @@ A GitHub Actions workflow is included in `.github/workflows/github-pages.yml`. P
 2. In your repository settings, navigate to **Pages** and choose **GitHub Actions** as the source if prompted.
 3. After the workflow completes, your site will be available at `https://<your-github-username>.github.io/<repository-name>/`.
 
+## Local Development
+
+Run `npm install` to install the development dependencies. To start a local server for testing, run `npm start` and open `http://localhost:8080` in your browser.
+
 You can also open `index.html` locally in a browser to preview the site before publishing.
