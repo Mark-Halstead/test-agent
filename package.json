@@ -6,6 +6,7 @@
   "scripts": {
     "test": "jest",
     "test:ci": "jest --ci --runInBand --reporters=default --reporters=jest-junit",
+    "test": "echo \"No tests specified\"",
     "start": "http-server -p 8080 -c-1"
   },
   "keywords": [],
@@ -22,5 +23,6 @@
   "jest-junit": {
     "outputDirectory": "test-results",
     "outputName": "junit.xml"
+    "http-server": "^14.1.1"
   }
 }
