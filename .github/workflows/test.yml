@@ -22,7 +22,7 @@ jobs:
       - name: Save run id
         run: echo "${{ github.run_id }}" > test-results/run_id.txt
       - name: Publish test results
-        uses: dorny/test-reporter@v1
+        uses: dorny/test-reporter@v2
         if: always()
         with:
           name: Jest Tests
