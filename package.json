@@ -1,0 +1,18 @@
+{
+  "name": "test-agent",
+  "version": "1.0.0",
+  "description": "This repository contains a simple yet polished static web application consisting of an `index.html` page and accompanying `style.css` stylesheet. The site is designed to be easily hosted on GitHub Pages and demonstrates a clean, responsive layout.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"No tests specified\"",
+    "start": "http-server -p 8080 -c-1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "private": "true",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
