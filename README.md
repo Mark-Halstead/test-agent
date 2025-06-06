@@ -1,12 +1,19 @@
-# Test Agent Web App
+# Elite Static Web App
 
-This repository contains a simple static web application consisting of an `index.html` page and a `style.css` stylesheet. The project demonstrates a minimal HTML and CSS setup that can be hosted using GitHub Pages or any static file server.
+This repository contains a simple yet polished static web application consisting of an `index.html` page and accompanying `style.css` stylesheet. The site is designed to be easily hosted on GitHub Pages and demonstrates a clean, responsive layout.
 
-## How to Host on GitHub Pages
+## Features
 
-1. Commit your code to the `main` branch (or any branch you choose).
-2. In your repository settings on GitHub, navigate to **Pages**.
-3. Choose the branch to publish (commonly `main`) and set the source directory to `/`.
-4. Save the settings. GitHub will build and deploy your site, making it available at `https://<your-github-username>.github.io/<repository-name>/`.
+- Responsive design with a navigation menu
+- Minimal dependencies (pure HTML and CSS)
+- Automated deployment via GitHub Actions
 
-Open `index.html` in a browser to see the page locally or after deployment to view it online.
+## Deployment
+
+A GitHub Actions workflow is included in `.github/workflows/github-pages.yml`. Push changes to the `main` branch, and the workflow will automatically deploy the contents of the repository to GitHub Pages.
+
+1. Create a new repository on GitHub and push this code to the `main` branch.
+2. In your repository settings, navigate to **Pages** and choose **GitHub Actions** as the source if prompted.
+3. After the workflow completes, your site will be available at `https://<your-github-username>.github.io/<repository-name>/`.
+
+You can also open `index.html` locally in a browser to preview the site before publishing.
