@@ -1,0 +1,36 @@
+name: Node.js CI
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm install
+      - run: |
+          mkdir -p test-results
+          npm run test:ci > test-results/test.log
+      - name: Save run id
+        run: echo "${{ github.run_id }}" > test-results/run_id.txt
+      - name: Publish test results
+        uses: dorny/test-reporter@v1
+        if: always()
+        with:
+          name: Jest Tests
+          path: test-results/junit.xml
+          reporter: jest-junit
+      - name: Upload logs
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-results-${{ github.run_id }}
+          path: test-results
